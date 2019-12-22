@@ -1,0 +1,23 @@
+{
+    "name": "node-red-on-docker",
+    "description": "Node-Red on Docker with adjustable --max-old-space-size (use ENV $NODE_MAX_SIZE)",
+
+    "version": "1.0.1",
+    "scripts": {
+        "start": "ls -l && echo NODE_MAX_SIZE = $NODE_MAX_SIZE && node --max-old-space-size=$NODE_MAX_SIZE node_modules/node-red/red.js --settings settings.js"
+    },
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "feedparser": "~0.19.2",
+        "mongodb": "~2.1.x",
+        "nano": "~5.11.0",
+        "node-red": "0.19.6",
+        "redis": "~0.10.1",
+        "when": "~3.x"
+    },
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/T-Sivaja/node-red-docker"
+    }
+}

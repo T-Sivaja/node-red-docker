@@ -7,13 +7,13 @@
         "start": "ls -l && echo NODE_MAX_SIZE = $NODE_MAX_SIZE && node --max-old-space-size=$NODE_MAX_SIZE node_modules/node-red/red.js --settings settings.js"
     },
     "dependencies": {
-        "dotenv": "^8.2.0",
-        "feedparser": "~0.19.2",
-        "mongodb": "~2.1.x",
-        "nano": "~5.11.0",
+        "dotenv": "8.2.0",
+        "feedparser": "0.19.2",
+        "mongodb": "2.1.21",
+        "nano": "5.11.2",
         "node-red": "0.19.6",
-        "redis": "~0.10.1",
-        "when": "~3.x"
+        "redis": "0.10.3",
+        "when": "3.7.8"
     },
     "license": "Apache-2.0",
     "repository": {

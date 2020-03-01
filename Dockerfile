@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:4
+FROM node:8
 
 # Home directory for Node-RED application source code.
 RUN mkdir -p /usr/src/node-red-docker
@@ -9,7 +9,7 @@ RUN mkdir /data
 WORKDIR /usr/src/node-red-docker
 
 # Add node-red user so we aren't running as root.
-RUN adduser -h /usr/src/node-red-docker -D -H node-red \
+RUN useradd -ms /bin/bash node-red && adduser node-red sudo \
     && chown -R node-red:node-red /data \
     && chown -R node-red:node-red /usr/src/node-red-docker
 
